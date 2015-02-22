@@ -1,0 +1,23 @@
+package test;
+    
+message Component {
+
+    enum ComponentType {
+        COMP_0 = 0;
+        COMP_1 = 1;
+        COMP_2 = 2;
+    }
+
+    required ComponentType type = 1;
+    repeated bytes data = 2; 
+}
+
+message Entity {
+    required int32 id = 1;
+
+
+    message Components {
+        repeated Component comp = 1;
+    }
+}
+
